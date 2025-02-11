@@ -1,9 +1,4 @@
 # Risk Analysis
+## Overview
+A full-stack web application for risk analysis, using Flask as the backend, React.js as the frontend, and Streamlit for interactive data visualization and analysis.
 
-## `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
