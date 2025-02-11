@@ -1,15 +1,15 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
-/water_project/node_modules
-/water_project/.pnp
+/node_modules
+/.pnp
 .pnp.js
 
 # testing
-/water_project/coverage
+/coverage
 
 # production
-/water_project/build
+/build
 
 # misc
 .DS_Store
