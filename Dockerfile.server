@@ -1,0 +1,20 @@
+# Server (Flask)
+FROM python:3.12.4 AS server
+
+WORKDIR /app
+
+# Copy server files
+COPY server /server
+COPY streamlit /streamlit
+
+# Create a virtual environment
+RUN python -m venv venv
+
+# Activate virtual environment & install dependencies
+RUN /bin/bash -c "source venv/bin/activate && pip install -r server/requirements.txt"
+
+# Expose Flask API port and Streamlit port
+EXPOSE 5000 8501
+
+# Command to run Flask and Streamlit
+CMD ["/bin/bash", "-c", "source venv/bin/activate && python server/app.py && streamlit run streamlit/general.py"]

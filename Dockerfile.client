@@ -1,0 +1,16 @@
+# Client (React)
+FROM node:alpine AS client
+
+WORKDIR /app/client
+
+# Copy frontend files
+COPY client .
+
+# Install dependencies & build React app
+RUN npm install && npm run build
+
+# Expose frontend port
+EXPOSE 3000
+
+# Command to start React server
+CMD ["npm", "start"]
